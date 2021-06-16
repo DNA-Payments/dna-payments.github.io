@@ -1,0 +1,39 @@
+<!doctype html><html><head><meta charset="UTF-8"><style>* {
+      margin: 0;
+      padding: 0;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      border: none;
+      background-color: transparent;
+    }
+
+    body, form, input, select {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    :focus {
+      outline: 0;
+    }
+
+    input.autofill-field {
+      /* Safari needs a width of at least 2px */
+      width: 2px;
+      z-index: -1;
+      /* Dashline password manager needs the inputs to be on the page
+         So we can't set left to -9999px
+      */
+      left: -2px;
+      opacity: 0;
+    }
+
+    @font-face {
+      font-family: 'password';
+      font-style: normal;
+      font-weight: 400;
+      src: url(https://jsbin-user-assets.s3.amazonaws.com/rafaelcastrocouto/password.ttf);
+    }</style></head><body><div style="position: absolute; left: -1000px; font-family: password; opacity: 0;">we need it to fetch password font</div><script defer="defer" src="hosted-fields-frame.js"></script></body></html>
